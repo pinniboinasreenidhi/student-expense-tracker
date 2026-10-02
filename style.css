@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #1f2937;
+  min-height: 100vh;
+}
+
+.container {
+  width: min(1000px, 92%);
+  margin: 40px auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+header h1 {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+header p {
+  color: #6b7280;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.card, .form-card, .list-card {
+  background: white;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.card span {
+  display: block;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.card strong {
+  font-size: 28px;
+}
+
+.form-card, .list-card {
+  margin-bottom: 22px;
+}
+
+h2 {
+  margin-bottom: 18px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+  font-size: 15px;
+  background: white;
+}
+
+button {
+  margin-top: 18px;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 9px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.list-header select {
+  max-width: 200px;
+}
+
+.expense-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.expense-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 18px;
+  padding: 15px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.expense-info h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.expense-info p {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.amount {
+  font-weight: 700;
+}
+
+.delete-btn {
+  margin: 0;
+  padding: 8px 12px;
+  background: #ef4444;
+  font-size: 13px;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+.empty {
+  text-align: center;
+  color: #6b7280;
+  padding: 25px 0 5px;
+}
+
+@media (max-width: 650px) {
+  .container {
+    margin: 25px auto;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  .summary,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .list-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .list-header select {
+    max-width: none;
+  }
+
+  .expense-item {
+    grid-template-columns: 1fr auto;
+  }
+
+  .delete-btn {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+}
